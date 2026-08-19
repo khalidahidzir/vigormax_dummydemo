@@ -1,0 +1,53 @@
+:root {
+  /* Brand mark — sampled from the Vigormax logo artwork */
+  --vm-brand-red: #fd1400;
+  --vm-brand-ink: #10131c;
+
+  /* Primary — operational green, used for primary actions and cleared states */
+  --vm-green-700: #0f6e56;
+  --vm-green-500: #1d9e75;
+  --vm-green-100: #e1f5ee;
+
+  /* Amber — in-progress, pending clearance, due-soon */
+  --vm-amber-800: #633806;
+  --vm-amber-500: #ba7517;
+  --vm-amber-100: #faeeda;
+
+  /* Red — overdue, destructive */
+  --vm-red-500: #a32d2d;
+  --vm-red-300: #f09595;
+  --vm-red-100: #fcebeb;
+
+  /* Blue — informational, compliance category, edit actions */
+  --vm-blue-500: #185fa5;
+  --vm-blue-100: #e6f1fb;
+
+  /* Olive — done column, HR category */
+  --vm-olive-600: #3b6d11;
+  --vm-olive-100: #eaf3de;
+
+  /* Violet — action-item-list type only */
+  --vm-violet-800: #5b21b6;
+  --vm-violet-100: #ede9fe;
+
+  /* Warm neutrals */
+  --vm-ink: #14171e;
+  --vm-stone-600: #5f5e5a;
+  --vm-stone-100: #f0efe9;
+  --vm-canvas: #f4f5f7;   /* cooled from the old warm cream — reads operational */
+  --vm-chat-ai: #eef0f2;
+  --vm-white: #ffffff;
+
+  /* Command rail — softened slate (not inky black) */
+  --vm-rail: #2b333f;
+  --vm-rail-2: #363f4d;
+  --vm-rail-mark: #414b5a;
+  --vm-rail-line: rgba(255, 255, 255, 0.10);
+  --vm-rail-text: #aab0bc;
+  --vm-rail-text-dim: #7c8390;
+  --vm-rail-active: #ffffff;
+
+  /* Hairline — the product's only border colour */
+  --vm-hairline: rgba(16, 19, 28, 0.10);
+  --vm-scrim: rgba(0, 0, 0, 0.3);
+}

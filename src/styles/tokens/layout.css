@@ -1,0 +1,13 @@
+:root {
+  --sidebar-width: 224px;
+  --main-padding: var(--space-8);
+  --modal-width: 420px;
+  --auth-card-width: 360px;
+  --detail-panel-width: 380px;
+  --chat-height: 480px;
+  --logo-mark-size: 34px;
+  --avatar-sm: 20px;
+  --avatar-md: 26px;
+  --avatar-lg: 30px;
+  --nav-icon-size: 14px;
+}

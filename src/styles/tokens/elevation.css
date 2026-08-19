@@ -1,0 +1,13 @@
+:root {
+  --border-hairline: 0.5px solid var(--vm-hairline);
+  --border-dashed: 1.5px dashed currentColor; /* @kind other */
+
+  --shadow-flat: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-stat: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --shadow-float: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-modal: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  /* Active nav item marker — an inset rule, not a border */
+  --inset-nav-active: inset 3px 0 0 var(--vm-green-500);
+}

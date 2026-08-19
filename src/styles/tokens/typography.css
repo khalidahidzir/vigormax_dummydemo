@@ -1,0 +1,37 @@
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-product: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --font-data: var(--font-mono);
+
+  /* Sizes used verbatim in the product */
+  --text-10: 10px;
+  --text-11: 11px;
+  --text-12: 12px;
+  --text-13: 13px;
+  --text-14: 14px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-20: 20px;
+  --text-24: 24px;
+  --text-28: 28px;
+  --text-30: 30px;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  --leading-tight: 140%;
+  --leading-normal: 150%;
+  --leading-relaxed: 1.6;
+
+  /* Semantic roles */
+  --type-page-title: var(--weight-semibold) var(--text-24) / var(--leading-tight) var(--font-display);
+  --type-section-title: var(--weight-semibold) var(--text-15) / var(--leading-tight) var(--font-display);
+  --type-body: var(--weight-regular) var(--text-13) / var(--leading-normal) var(--font-sans);
+  --type-subtitle: var(--weight-regular) var(--text-14) / var(--leading-normal) var(--font-sans);
+  --type-label: var(--weight-medium) var(--text-12) / var(--leading-normal) var(--font-sans);
+  --type-meta: var(--weight-regular) var(--text-11) / var(--leading-normal) var(--font-mono);
+  --type-metric: var(--weight-semibold) var(--text-30) / 1 var(--font-mono);
+}

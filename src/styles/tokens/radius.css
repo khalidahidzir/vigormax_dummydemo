@@ -1,0 +1,11 @@
+:root {
+  --radius-sm: 6px;   /* small action chips, progress bars */
+  --radius-md: 8px;   /* buttons, inputs, task cards */
+  --radius-lg: 10px;  /* stat cards, list cards, panels */
+  --radius-xl: 12px;  /* forms, chat bubbles */
+  --radius-2xl: 14px; /* modals */
+  --radius-3xl: 16px; /* auth card */
+  --radius-pill: 20px;
+  --radius-round: 50%;
+  --radius-tail: 4px; /* chat bubble tail corner */
+}

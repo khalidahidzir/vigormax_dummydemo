@@ -1,0 +1,7 @@
+/* Two faces plus a mono for operational data — the redesign's type system.
+   Space Grotesk: screen + section headings and the VigorAI product name.
+   Inter: everything else (400/500/600).
+   JetBrains Mono: IDs, counts, dates, metrics — the operational-data signature. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');

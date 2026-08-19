@@ -1,0 +1,66 @@
+:root {
+  /* Text */
+  --text-heading: var(--vm-ink);
+  --text-primary: var(--vm-ink);
+  --text-muted: var(--vm-stone-600);
+  --text-on-accent: var(--vm-white);
+  --text-link: var(--vm-green-500);
+
+  /* Surfaces */
+  --surface-page: var(--vm-canvas);
+  --surface-card: var(--vm-white);
+  --surface-sunken: var(--vm-stone-100);
+  --surface-nav: var(--vm-white);
+  --surface-scrim: var(--vm-scrim);
+
+  /* Accent / primary action */
+  --accent: var(--vm-green-500);
+  --accent-soft: var(--vm-green-100);
+  --accent-strong: var(--vm-green-700);
+
+  /* Status pairs — soft background + readable foreground */
+  --status-todo-bg: var(--vm-stone-100);
+  --status-todo-fg: var(--vm-stone-600);
+  --status-progress-bg: var(--vm-amber-100);
+  --status-progress-fg: var(--vm-amber-500);
+  --status-done-bg: var(--vm-olive-100);
+  --status-done-fg: var(--vm-olive-600);
+  --status-cleared-bg: var(--vm-green-100);
+  --status-cleared-fg: var(--vm-green-700);
+  --status-pending-bg: var(--vm-amber-100);
+  --status-pending-fg: var(--vm-amber-800);
+  --status-overdue-bg: var(--vm-red-100);
+  --status-overdue-fg: var(--vm-red-500);
+  --status-overdue-border: var(--vm-red-300);
+  --status-info-bg: var(--vm-blue-100);
+  --status-info-fg: var(--vm-blue-500);
+
+  /* Category colours (document repository + audit types) */
+  --cat-compliance-bg: var(--vm-blue-100);
+  --cat-compliance-fg: var(--vm-blue-500);
+  --cat-operations-bg: var(--vm-amber-100);
+  --cat-operations-fg: var(--vm-amber-500);
+  --cat-hr-bg: var(--vm-olive-100);
+  --cat-hr-fg: var(--vm-olive-600);
+  --cat-finance-bg: var(--vm-stone-100);
+  --cat-finance-fg: var(--vm-stone-600);
+  --cat-action-bg: var(--vm-violet-100);
+  --cat-action-fg: var(--vm-violet-800);
+
+  /* Chat */
+  --chat-user-bg: var(--vm-green-500);
+  --chat-user-fg: var(--vm-white);
+  --chat-ai-bg: var(--vm-chat-ai);
+  --chat-ai-fg: var(--vm-ink);
+}
+
+:root {
+  /* Command rail */
+  --surface-rail: var(--vm-rail);
+  --surface-rail-hover: var(--vm-rail-2);
+  --surface-rail-mark: var(--vm-rail-mark);
+  --rail-border: var(--vm-rail-line);
+  --text-on-rail: var(--vm-rail-text);
+  --text-on-rail-dim: var(--vm-rail-text-dim);
+  --text-on-rail-active: var(--vm-rail-active);
+}
