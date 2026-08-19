@@ -110,7 +110,7 @@ export function TaskBoardScreen({ tasks, onMove }) {
               {overdue && <Badge label="Overdue" tone="overdue" />}
             </>}
             footer={<>
-              <Button block>Edit task</Button>
+              <Button style={{ flex: 1 }}>Edit task</Button>
               <Button variant="dangerGhost">Delete</Button>
             </>}>
             <h3 style={{ margin: '0 0 22px', fontSize: 'var(--text-17)', fontWeight: 'var(--weight-semibold)', color: 'var(--text-primary)', lineHeight: 'var(--leading-tight)' }}>{viewing.title}</h3>
