@@ -1,27 +1,168 @@
-# Vigormax Digital Oversight System — Demo
+Vigormax Digital Oversight System — Demo
+A fully interactive front-end demo of Vigormax Security Services' internal operations platform (the Digital Oversight System). This is a production-quality React application showcasing a command-center UI for managing security operations, personnel, tasks, compliance documentation, and operational oversight.
+Demo data only. There is no backend in this repository, no database, and no real company or personnel data — every name, phone number, task, and document is fictional, generated for demonstration purposes only. The real product architecture connects to Supabase and lives in a private repository.
 
-A click-through recreation of Vigormax Security Services' internal operations platform (the Digital Oversight System), rebuilt with a redesigned "command-surface" visual direction.
+✨ Live Features
+1. Dashboard — Real-time operations view
+Six metric tiles (team count, open tasks, pending docs, daily incidents, alert status, SLA compliance)
+Live activity feed with timestamp-sorted events
+Status indicators at a glance
+2. Task Board — Kanban-style workflow
+Drag cards between To Do / In Progress / Done columns
+Filter by assignee and branch location
+Click any card to open a detail modal with full task context
+3. Employees — Team directory with search
+Search by name or position title
+Filter by branch location
+View contact info, roles, and assignment status
+4. Onboarding — Compliance document tracker
+Document-first workflow for new hires
+Status badges (pending, approved, rejected, withdrawn)
+Hover to see clearance details; click View / Update Documents to:
+Upload compliance files
+Approve, reject, or withdraw submissions
+Track approver name and timestamp
+5. Documents — Centralized document repository
+Filter by category chip (policies, training, certifications, licenses)
+Searchable document list
+Metadata (upload date, approver, category)
+6. Audit Log — Operational compliance audit trail
+Select an audit item on the left to load its detail lines on the right
+Tick off completed items to update the completion progress bar
+Timestamp and user tracking for each entry
+7. VigorAI Assistant — AI-powered operational chat
+Claude-powered assistant for operational queries (canned replies in demo)
+Context-aware suggestions
+Real implementation in production connects to Claude API
 
-**This is a static, front-end-only showcase.** There is no backend, no database, and no real company or personnel data — every name, phone number, task and document in here is fictional, generated for demonstration purposes only. The real product connects to Supabase and lives in a private repository.
-
-## Run locally
-
-```bash
+🚀 Quick Start
+# Install dependencies
 npm install
+
+# Run dev server (hot reload on port 5173)
 npm run dev
-```
 
-## Flow
+# Build for production
+npm run build
 
-1. **Sign in** — the auth card is pre-filled; submit to enter the app.
-2. **Dashboard** — six metric tiles and the recent activity feed.
-3. **Task board** — drag cards between To do / In progress / Done; filter by assignee and branch; click a card for the detail modal.
-4. **Employees** — search by name or position, filter by branch.
-5. **Onboarding** — a document-first table. Hover a status badge to see clearance detail; open "View / update documents" to upload, approve, reject or withdraw.
-6. **Documents** — filter the repository by category chip.
-7. **Audit log** — select an item on the left to load its lines on the right; tick lines to move the completion bar.
-8. **VigorAI** — canned replies stand in for the Claude call.
+# Preview production build
+npm preview
+The app will be available at http://localhost:5173 after running npm run dev.
 
-## Stack
+🏗 Architecture
+Component Structure
+src/
+├── components/
+│   ├── core/           # Reusable UI primitives (Button, Input, Badge, Checkbox, Select, etc.)
+│   ├── app/            # Application-level components (Sidebar, Modal, TaskCard, Stat tiles)
+│   └── data/           # Data display components (DataTable, Avatar, ProgressBar, RowMenu)
+├── screens/            # Full-page screen components
+│   ├── LoginScreen
+│   ├── DashboardScreen
+│   ├── TaskBoardScreen
+│   ├── EmployeesScreen
+│   ├── OnboardingScreen
+│   ├── DocumentsScreen
+│   ├── AuditScreen
+│   └── AssistantScreen
+├── styles/
+│   ├── tokens/         # CSS custom properties (colors, spacing, typography)
+│   └── global.css
+├── data.js             # Mock data (employees, tasks, documents, audit items)
+├── App.jsx             # Main app state and routing
+└── main.jsx            # React entry point
+Design System
+No external CSS framework — all styling uses inline styles + CSS custom properties
+Design tokens in src/styles/tokens/ define the entire visual system (colors, spacing, shadows, typography)
+Centralized token management makes theming and consistency straightforward
+Components are highly reusable and composition-friendly
+State Management
+React hooks (useState) for local component state
+Lifting state to App.jsx for cross-screen data (tasks, onboarding records, audit log)
+Callback functions (move, uploadDoc, approveDoc, etc.) handle state updates
 
-React 19 + Vite, no external UI or CSS framework — styling is all inline styles driven by CSS custom-property design tokens in `src/styles/tokens/`.
+🛠 Tech Stack
+Layer
+Technology
+UI Framework
+React 19 (with hooks)
+Build Tool
+Vite (lightning-fast dev server)
+Styling
+Inline styles + CSS custom properties (no CSS frameworks)
+Linting
+ESLint (React hooks plugin)
+Type Checking
+TypeScript types available (optional)
+
+Why This Stack?
+React 19 — Latest stable with concurrent features and modern hooks API
+Vite — Sub-100ms HMR; industry-standard for modern React apps
+No CSS framework — Custom design system proves strong UI/UX skills and system thinking
+Minimal dependencies — Only React and React-DOM; maximum portability
+
+📋 Mock Data
+The app uses realistic demo data to showcase functionality:
+10 employees across 3 branches with varying roles
+15 tasks in different stages (To Do, In Progress, Done)
+8 onboarding records with compliance workflow stages
+20+ documents organized by category
+Audit log with 50+ timestamped entries
+All data is seeded in src/data.js and can be easily modified for different scenarios.
+
+✅ Interactive Workflows Demonstrated
+Task Management
+Create/edit a task (UI ready; logic in place)
+Drag tasks between workflow columns
+Filter by assignee or location
+View full task detail in modal
+Compliance Onboarding
+Upload a document for an employee
+Approver reviews and approves/rejects
+Status updates cascade through clearance logic
+Badge color changes reflect current state
+Operational Audit
+Select an audit item from the list
+View all associated log lines
+Check off completed items
+Watch the progress bar update in real-time
+
+📦 Features Ready for Production Integration
+This demo is structured for easy integration into a real backend:
+API Adapter Layer — Swap mock data (data.js) for actual API calls
+Auth Integration — Login screen ready for OAuth/session management
+Database Ready — Component data structures match typical PostgreSQL/Supabase schemas
+State Pattern — Lift state management to Redux/Zustand or server state tool when needed
+Real Claude API — AssistantScreen can plug into actual Claude API (@anthropic-ai/sdk)
+
+🎨 Customization
+Change Colors
+Edit CSS custom properties in src/styles/tokens/ to rebrand the entire app instantly.
+Add Features
+Add a new screen: Create file in src/screens/, add route in App.jsx
+Add a component: Drop it in src/components/ (core, app, or data folder)
+Extend mock data: Modify src/data.js to add new employees, tasks, etc.
+Connect to a Backend
+Replace mock data imports with API calls:
+// Before: import mock data
+import { EMPLOYEES, TASKS } from './data.js'
+
+// After: Fetch from backend
+const [employees, setEmployees] = useState([])
+useEffect(() => {
+  fetch('/api/employees').then(r => r.json()).then(setEmployees)
+}, [])
+
+🔗 Live Demo
+Deployed on: Vercel
+GitHub: khalidahidzir/vigormax_dummydemo
+
+👤 Ownership & Credits
+Built by: Khalida Hidzir
+Full-stack enterprise integration & automation developer
+Specialty: React, data visualization, and production iPaaS/GraphQL workflows
+This demo showcases front-end architecture, component design, and UX implementation
+
+📝 License
+Proprietary. Demo is for portfolio / hiring purposes only.
+
